@@ -1,0 +1,27 @@
+<snippet>
+    <content><![CDATA[(function() {
+    'use strict';
+
+    describe('Service: ${2:Service}', function () {
+
+      // load the service's module
+      beforeEach(module('${1:module}'));
+
+      // instantiate service
+      var ${2:Service};
+      beforeEach(inject(function (_${2:Service}_) {
+        ${2:Service} = _${2:Service}_;
+      }));
+
+      it('should do something', function () {
+        expect(!!${2:Service}).toBe(true);
+      });
+
+    });
+
+})();
+]]></content>
+    <tabTrigger>ngservice.spec</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
+
