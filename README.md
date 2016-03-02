@@ -15,6 +15,5 @@ Mac:
 ```
 
 ```
-ln -s 
 ln -s /path/to/sublime-angular-snippets/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/sublime-angular-snippets/sublime-angular-snippets
 ```
