@@ -21,7 +21,7 @@
                 withCredentials: true
             }
         };
-        return $resource(url, {}, actions);
+        return \$resource(url, {}, actions);
 
         ////////////////
     }
