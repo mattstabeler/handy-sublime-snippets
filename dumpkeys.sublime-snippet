@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+for (var key in ${1:iterable}){
+    if(${1:iterable}.hasOwnProperty(key)){
+        console.log(${1:iterable})[key];
+    }
+}
+]]></content>
+    <tabTrigger>for</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
