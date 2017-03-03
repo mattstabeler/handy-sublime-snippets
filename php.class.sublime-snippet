@@ -1,0 +1,61 @@
+<snippet>
+    <content><![CDATA[
+class ${1:class}{
+
+    private $id;
+
+
+    function __construct($id, $details=null){
+
+        $this->id = $id;
+
+        if ($details){
+            $this->load_details($details);
+        }else{
+            $this->load();
+        }
+
+    }
+
+    public static function New${1:class}($data, $level = 0){
+
+        $is = 1;
+
+        if($id){
+            $instance = new ${1:class}($id);
+            return $instance;
+        } else {
+            throw new Exception("Could not create ${1:class}", 500);
+        }
+
+    }
+    private function load_details($details) {
+        $this->details        = $details;
+    }
+    function load(){
+        global $odb;
+        $sql = "
+
+            SELECT
+                *
+            FROM
+                ${1:class} u
+            WHERE
+                id = " . $this->id . "
+                ";
+
+        $res = $odb->execute_sql($sql);
+
+        $details = $res->fetch_assoc();
+
+
+        if (count($details) > 0){
+            $details = array_shift($details);
+            $this->load_details($details);
+        }else{
+            throw new Exception("No ${1:class} ID");
+        }
+    }]]></content>
+    <tabTrigger>class</tabTrigger>
+    <scope>source.PHP</scope>
+</snippet>
