@@ -20,7 +20,7 @@
             controller: ${4:Controller},
             controllerAs: '${5:vm}',
             link: link,
-            restrict: 'A',
+            restrict: 'EA',
             scope: {
             }
         };
