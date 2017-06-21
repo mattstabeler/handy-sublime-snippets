@@ -22,6 +22,7 @@
             link: link,
             restrict: 'EA',
             scope: {
+                ${6:input} : '=${6}'
             }
         };
         return directive;
@@ -32,6 +33,9 @@
 
     /* @ngInject */
     function ${4:Controller} () {
+
+        var vm = this;
+        console.log(vm.${6:input});
 
     }
 })();
