@@ -1,6 +1,6 @@
 <snippet>
-    <content><![CDATA[new Promise((resolve, reject) => {
-      // do something
+    <content><![CDATA[Promise((resolve, reject) => {
+      // TODO: Do something
       resolve();
       //reject();
     })]]></content>

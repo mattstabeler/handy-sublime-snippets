@@ -1,0 +1,20 @@
+<snippet>
+    <content><![CDATA[
+const ${1:thingtotest} = require('./${2:path}.js');
+describe("${1:thingtotest} should run", () => {
+
+    beforeEach(() => {
+        handler = new ${1:thingtotest}(${3:parameters});
+    });
+
+    it('should exist', function () {
+      expect(!!${1:thingtotest}).toBe(true);
+    });
+
+});
+
+
+]]></content>
+    <tabTrigger>describe</tabTrigger>
+    <scope>source.js</scope>
+</snippet>
