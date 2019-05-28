@@ -2,8 +2,6 @@
     <content><![CDATA[(function() {
     'use strict';
 
-    angular
-        .module('${1:module}')
 })();
 ]]></content>
     <tabTrigger>iife</tabTrigger>
